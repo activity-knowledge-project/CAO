@@ -1,4 +1,4 @@
-@prefix    :  <http://sonfack.com/2023/12/cao/> .
+@prefix    :  <https://w3id.org/core-activity-ontology/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix xml: <http://www.w3.org/XML/1998/namespace> .
@@ -11,18 +11,19 @@
 @prefix time: <https://w3id.org/MON/time.owl#> .
 
 
-<http://sonfack.com/2023/12/cao/>  rdf:type owl:Ontology ;
-    owl:versionInfo "1.0" ;
+<https://w3id.org/core-activity-ontology/>  rdf:type owl:Ontology ;
+    owl:versionInfo "1.1" ;
     owl:imports <https://w3id.org/MON/time.owl> ;
     dc:title "Core Activity Ontology" ;
     dct:created "2023-12-15"^^xsd:date ;
     dct:creator <https://orcid.org/0000-0002-6085-6818> ;
-    dct:creator <mailto:sss.sonfack@gmail.com> ;
+    dct:creator  <mailto:sss.sonfack@gmail.com>, <mailto:sss.sounchio@gmail.com> ;
     rdfs:label "CAO" ;
     dc:licence "https://creativecommons.org/licenses/by/4.0/" ;
     dc:description """This ontology defines core concepts and their relations to represent activities knowledge within an organization."""@en ;
-    skos:changeNote "2024-06-29 change # to / and revision of temporality management" ;
-    skos:changeNote "2024-07-03 use and import https://w3id.org/MON/time.owl time ontology which is a reduced version of the owl time ontology " .
+    skos:changeNote "2024-06-29 change # to / and revision of temporality management"@en ;
+    skos:changeNote "2024-07-03 use and import https://w3id.org/MON/time.owl time ontology which is a reduced version of the owl time ontology"@en ;
+    skos:changeNote "2025-09-07 changing the private namespace to a public namespace from w3id"@en.
 
 
 #################################################################
@@ -360,10 +361,10 @@
                       rdfs:comment "The description of an object"@en .
 
 :ruleDescription rdf:type owl:DatatypeProperty ;
-		 rdfs:label "rule description" ;
-                      rdfs:domain :Rule ;
-                      rdfs:range xsd:string ;
-                      rdfs:comment "The description of a rule"@en .
+    rdfs:label "rule description" ;
+    rdfs:domain :Rule ;
+    rdfs:range xsd:string ;
+    rdfs:comment "The description of a rule"@en .
 		      
 
 ############## Property chain ##############
